@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up – TravelWorld</title>
+  <meta name="description" content="Create your free TravelWorld account and start exploring the world." />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body class="auth-page">
+
+  <!-- ── Header ───────────────────────────────────────────── -->
+  <header class="auth-header">
+    <div class="logo">
+      <a href="./index.html">
+        <img src="./assests/tw_logo_horizontal_2.png" alt="TravelWorld Logo" width="150" />
+      </a>
+    </div>
+    <a href="./index.html" class="back-home-link">← Back to Home</a>
+  </header>
+
+  <!-- ── Main layout ──────────────────────────────────────── -->
+  <main class="auth-main">
+
+    <!-- Left panel: form -->
+    <div class="auth-panel auth-panel--right">
+      <div class="auth-form-card">
+        <div class="auth-form-header">
+          <h1>Create Account</h1>
+          <p>Already have an account? <a href="./login.html">Login</a></p>
+        </div>
+
+        <form id="signup-form" class="auth-form" novalidate>
+
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
+              <input type="text" id="signup-name" required placeholder="John Doe" autocomplete="name" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email">Email Address</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+              <input type="email" id="signup-email" required placeholder="name@example.com" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              <input type="password" id="signup-password" required minlength="6" placeholder="Min. 6 characters" autocomplete="new-password" />
+              <button type="button" class="toggle-pw" aria-label="Show/hide password">👁</button>
+            </div>
+            <div class="pw-strength" id="pw-strength" aria-live="polite"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-confirm">Confirm Password</label>
+            <div class="input-wrapper">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <input type="password" id="signup-confirm" required minlength="6" placeholder="Re-enter password" autocomplete="new-password" />
+            </div>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="agree-terms" required />
+            <label for="agree-terms">
+              I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="auth-submit-btn" id="signup-submit-btn">
+            <span>Create My Account</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+          <div id="auth-message" class="auth-message"></div>
+
+        </form>
+
+        <div class="auth-divider"><span>or sign up with</span></div>
+
+        <div class="auth-socials">
+          <button class="social-btn social-btn--google" type="button">
+            <svg viewBox="0 0 48 48" width="20" height="20">
+              <path fill="#EA4335" d="M24 9.5c3.1 0 5.9 1.1 8.1 2.9l6-6C34.4 3 29.5 1 24 1 14.8 1 7 6.7 3.8 14.6l7 5.4C12.5 13.6 17.8 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.7c-.6 3-2.3 5.5-4.8 7.2l7.4 5.7c4.3-4 6.8-9.9 6.8-16.9z"/>
+              <path fill="#FBBC05" d="M10.8 28.6A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.1.8-4.6l-7-5.4A23 23 0 0 0 1 24c0 3.7.9 7.2 2.5 10.3l7.3-5.7z"/>
+              <path fill="#34A853" d="M24 47c5.4 0 10-1.8 13.3-4.9l-7.4-5.7c-1.8 1.2-4.1 2-6.9 2-6.2 0-11.5-4.1-13.4-9.8l-7.3 5.7C7 41.3 14.8 47 24 47z"/>
+            </svg>
+            Google
+          </button>
+          <button class="social-btn social-btn--fb" type="button">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#1877F2">
+              <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.33l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/>
+            </svg>
+            Facebook
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right panel: branding -->
+    <div class="auth-panel auth-panel--left">
+      <div class="auth-brand">
+        <h2>Join<br /><span>TravelWorld</span> Today!</h2>
+        <p>Start your journey with thousands of travellers who trust us to plan their perfect trips.</p>
+
+        <div class="auth-features">
+          <div class="auth-feature">
+            <span class="auth-feature-icon">✈️</span>
+            <div>
+              <strong>500+ Destinations</strong>
+              <p>Explore curated packages across all continents.</p>
+            </div>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">🛡️</span>
+            <div>
+              <strong>Secure & Private</strong>
+              <p>Your data is encrypted and never shared with third parties.</p>
+            </div>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">🎁</span>
+            <div>
+              <strong>Exclusive Deals</strong>
+              <p>Members get early access to flash sales and special offers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-stats">
+          <div class="auth-stat">
+            <span class="auth-stat-num">50K+</span>
+            <span>Happy Travelers</span>
+          </div>
+          <div class="auth-stat">
+            <span class="auth-stat-num">98%</span>
+            <span>Satisfaction Rate</span>
+          </div>
+          <div class="auth-stat">
+            <span class="auth-stat-num">24/7</span>
+            <span>Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script>
+    // ── Standalone signup page script ─────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      const form      = document.getElementById('signup-form');
+      const submitBtn = document.getElementById('signup-submit-btn');
+      const msgBox    = document.getElementById('auth-message');
+      const toastCont = document.getElementById('toast-container');
+      const pwInput   = document.getElementById('signup-password');
+      const pwStrength= document.getElementById('pw-strength');
+
+      function showToast(msg, type = 'success') {
+        const t = document.createElement('div');
+        t.className = `toast ${type}`;
+        t.innerHTML = `<span class="toast-icon">${type === 'success' ? '✓' : type === 'error' ? '✗' : 'ℹ'}</span><div>${msg}</div>`;
+        toastCont.appendChild(t);
+        setTimeout(() => { t.classList.add('fade-out'); t.addEventListener('animationend', () => t.remove()); }, 3500);
+      }
+
+      function showMsg(text, type) {
+        msgBox.textContent = text;
+        msgBox.className   = `auth-message auth-message--${type}`;
+      }
+
+      // Password visibility toggle
+      document.querySelector('.toggle-pw').addEventListener('click', () => {
+        pwInput.type = pwInput.type === 'password' ? 'text' : 'password';
+      });
+
+      // Password strength indicator
+      pwInput.addEventListener('input', () => {
+        const val = pwInput.value;
+        let strength = 0;
+        if (val.length >= 6)  strength++;
+        if (val.length >= 10) strength++;
+        if (/[A-Z]/.test(val)) strength++;
+        if (/[0-9]/.test(val)) strength++;
+        if (/[^A-Za-z0-9]/.test(val)) strength++;
+
+        const labels = ['', 'Weak', 'Fair', 'Good', 'Strong', 'Very Strong'];
+        const colors = ['', '#ea4335', '#fbbc05', '#ff8c00', '#34a853', '#1a73e8'];
+        pwStrength.textContent = val ? `Strength: ${labels[strength] || 'Very Strong'}` : '';
+        pwStrength.style.color = colors[strength] || colors[5];
+      });
+
+      // Submit
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        msgBox.textContent = '';
+
+        const name     = document.getElementById('signup-name').value.trim();
+        const email    = document.getElementById('signup-email').value.trim();
+        const password = pwInput.value;
+        const confirm  = document.getElementById('signup-confirm').value;
+        const agreed   = document.getElementById('agree-terms').checked;
+
+        if (password !== confirm) {
+          showMsg('Passwords do not match.', 'error'); return;
+        }
+        if (!agreed) {
+          showMsg('Please agree to the Terms of Service.', 'error'); return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.querySelector('span').textContent = 'Creating account…';
+
+        try {
+          const res  = await fetch('/api/auth/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, password })
+          });
+          const data = await res.json();
+
+          if (res.ok) {
+            localStorage.setItem('currentUser', JSON.stringify(data.user));
+            showToast('Account created! Welcome to TravelWorld 🎉', 'success');
+            showMsg('Account created! Redirecting…', 'success');
+            setTimeout(() => window.location.href = './index.html', 1400);
+          } else {
+            showMsg(data.error || 'Registration failed.', 'error');
+            showToast(data.error || 'Registration failed.', 'error');
+            submitBtn.disabled = false;
+            submitBtn.querySelector('span').textContent = 'Create My Account';
+          }
+        } catch {
+          showMsg('Network error — please try again.', 'error');
+          submitBtn.disabled = false;
+          submitBtn.querySelector('span').textContent = 'Create My Account';
+        }
+      });
+
+      // Social buttons (placeholder)
+      document.querySelectorAll('.social-btn').forEach(btn => {
+        btn.addEventListener('click', () => showToast('Social sign-up coming soon!', 'info'));
+      });
+    });
+  </script>
+</body>
+</html>

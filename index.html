@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWorld - Travel, Enjoy and Live a New Life</title>
+    <meta name="description" content="Book your next trip with TravelWorld. Explore the best destinations around the world with easy booking and fast payment.">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="./assests/tw_logo_horizontal_2.png" alt="TravelWorld Logo" width="170">
+            </a>
+        </div>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#destination">Destination</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li id="auth-buttons">
+                    <a href="#" id="login-nav-btn">Login</a>
+                    <a href="#" class="sign-btn" id="signup-nav-btn">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>BEST <span>DESTINATIONS</span> AROUND THE WORLD</h2>
+                <h1>Travel, <span>Enjoy</span> and live a new Life</h1>
+                <p>
+                    Arranging travel can be challenging, but travel agents simplify the process. Their role combines being a customer advocate, coordinator and problem-solver so clients can enjoy their trip rather than worry about the numerous details.
+                </p>
+                <div class="hero-btns">
+                    <button class="contact-btn" id="hero-contact-btn">Contact</button>
+                    <button class="Booking-btn" id="hero-booking-btn">Booking</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./assests/vecteezy_ai-generated-a-man-with-travel-bag-isolated-on-transparent_40322343.png" alt="Traveler with bag" />
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services"> 
+            <div class="section-title">
+                <h5>Category</h5>
+                <h3>We offer Best Services</h3>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assests/dish1_281857-removebg-preview.png" alt="Weather" width="75"/>
+                    </div>
+                    <h4>Calculated Weather</h4>
+                    <p>Get accurate weather predictions and plan your outfits and activities ahead of time.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assests/—Pngtree—air plane in flight_4430796.png" alt="Plane" width="75"/>
+                    </div>
+                    <h4>Best Flight</h4>
+                    <p>We source the best flight deals with top-tier airlines for a safe and comfortable trip.</p>
+                </div>   
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assests/microphone-vintage-icon-png-31.png" alt="Microphone" width="75"/>
+                    </div>
+                    <h4>Local Events</h4>
+                    <p>Discover the most exciting local concerts, festivals, and cultural activities on your trip.</p>
+                </div>    
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assests/—Pngtree—settings glyph black icon_3755352.png" alt="Settings" width="75" />
+                    </div>
+                    <h4>Customization</h4>
+                    <p>Customize your travel itineraries according to your own personal tastes and preferences.</p>
+                </div>   
+            </div>    
+        </section>  
+
+        <!-- Destination Section -->
+        <section class="destination-section" id="destination">
+            <div class="section-title">
+                <h5>Top Selling</h5>
+                <h3>Top Destinations</h3>
+            </div>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <div class="dest-img-container">
+                        <img src="./assests/destination1.jpeg" alt="Maldives"/>
+                    </div>
+                    <div class="dest-info">
+                        <h4>South Asia, Maldives <span class="price">₹18,481</span></h4>
+                        <p>A stunning island nation in the Indian Ocean with pristine white sands.</p>
+                        <button class="dest-book-btn" data-destination="South Asia, Maldives">Book Now</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="dest-img-container">
+                        <img src="./assests/destination2.jpg" alt="London"/>
+                    </div>
+                    <div class="dest-info">
+                        <h4>London, UK <span class="price">₹60,145</span></h4>
+                        <p>A vibrant, historic, and cosmopolitan city located on the River Thames.</p>
+                        <button class="dest-book-btn" data-destination="London, UK">Book Now</button>
+                    </div>
+                </div>   
+                <div class="destination-card">
+                    <div class="dest-img-container">
+                        <img src="./assests/dstination3.jpg" alt="China"/>
+                    </div>
+                    <div class="dest-info">
+                        <h4>China <span class="price">₹21,341</span></h4>
+                        <p>A vast East Asian nation with a rich history and diverse landscapes.</p>
+                        <button class="dest-book-btn" data-destination="China">Book Now</button>
+                    </div>
+                </div>    
+            </div>    
+        </section>  
+
+        <!-- Booking & Thailand Section -->
+        <section class="booking-section" id="booking">
+            <div class="booking-container">
+                <div class="booking-left">
+                    <h5>Easy and Fast</h5>
+                    <h3>Book your next trip in 3 easy Steps</h3>
+                    
+                    <div class="step-item">
+                        <div class="step-icon icon-1">
+                            <img src="./assests/icon1.webp" alt="Step 1" width="30"/>  
+                        </div>
+                        <div class="step-text">
+                            <h5>Choose Destination</h5>
+                            <p>Choose your favourite place. No matter where you travel inside the world.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-icon icon-2">
+                            <img src="./assests/icon2.png" alt="Step 2" width="30"/>  
+                        </div>
+                        <div class="step-text">
+                            <h5>Make Payment</h5>
+                            <p>After finding your perfect spot, make your payment and get ready to travel.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-icon icon-3">
+                            <img src="./assests/icon3.png" alt="Step 3" width="30"/>  
+                        </div>
+                        <div class="step-text">
+                            <h5>Reach Airport on Selected Date</h5>
+                            <p>Lastly, you have to arrive at the airport on time and enjoy the vacation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-right" id="testimonials">
+                    <div class="booking-card">
+                        <div class="booking-card-img-container">
+                            <img src="./assests/thailand.jpg" alt="Thailand Trip" class="booking-img" />
+                        </div>
+                        <div class="booking-card-body">
+                            <h5>Trip To Thailand</h5>
+                            <p class="dates">24-25 June | by TravelWorld</p>
+                            
+                            <div class="booking-card-footer">
+                                <div class="people-going">
+                                    <img src="./assests/building.svg" alt="Building Icon" width="18">
+                                    <span>24 people going</span>
+                                </div>
+                                <button class="like-btn" aria-label="Like this trip">
+                                    <img src="./assests/like.png" alt="Like" width="20">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <div class="share-arrow">
+                    <img src="./assests/sen1.png" alt="Send Newsletter">
+                </div>
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Subscribe to get information, latest news and other interesting offers</h2>
+                    </div>
+                    <form id="subscribe-form" class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" id="subscribe-email" required placeholder="Enter Email"/>
+                        </div>
+                        <button type="submit" class="btn-sub">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="./assests/tw_logo_horizontal_2.png" alt="TravelWorld Logo" width="170"/>
+                <p>Book your trip in minutes, get full control for much longer.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Mobile</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Help/FAQ</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Affiliate</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="#">Airline fees</a></li>
+                    <li><a href="#">Airline</a></li>
+                    <li><a href="#">Low fare Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-app-store">
+                <h4>Discover our app</h4>
+                <div class="app-download">
+                    <img src="./assests/cover-removebg-preview.png" alt="Download App" width="200" />
+                </div>
+            </div>
+        </div> 
+        <div class="footer-bottom">
+            <p>All rights reserved @travelworld.com</p>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-login">&times;</span>
+            <h2>Welcome Back</h2>
+            <p>Login to access your bookings and travel details.</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="modal-submit-btn">Login</button>
+                <p class="modal-switch-text">Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-signup">&times;</span>
+            <h2>Create Account</h2>
+            <p>Join TravelWorld and explore the world with us.</p>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required minlength="6" placeholder="•••••••• (Min 6 chars)">
+                </div>
+                <button type="submit" class="modal-submit-btn">Sign Up</button>
+                <p class="modal-switch-text">Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-booking">&times;</span>
+            <h2>Book Your Dream Trip</h2>
+            <p>Fill out the details below and we will prepare your itinerary.</p>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="booking-name">Full Name</label>
+                    <input type="text" id="booking-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="booking-email">Email Address</label>
+                    <input type="email" id="booking-email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="booking-destination">Destination</label>
+                    <select id="booking-destination" required>
+                        <option value="" disabled selected>Select Destination</option>
+                        <option value="South Asia, Maldives">South Asia, Maldives (₹18,481)</option>
+                        <option value="London, UK">London, UK (₹60,145)</option>
+                        <option value="China">China (₹21,341)</option>
+                        <option value="Thailand">Thailand (Trip To Thailand)</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-date">Departure Date</label>
+                        <input type="date" id="booking-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-travelers">Travelers</label>
+                        <input type="number" id="booking-travelers" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+                <button type="submit" class="modal-submit-btn">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-contact">&times;</span>
+            <h2>Contact Us</h2>
+            <p>Have questions? We would love to hear from you.</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Full Name</label>
+                    <input type="text" id="contact-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" rows="4" required placeholder="Your message here..."></textarea>
+                </div>
+                <button type="submit" class="modal-submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="toast-container"></div>
+</body>
+</html>
